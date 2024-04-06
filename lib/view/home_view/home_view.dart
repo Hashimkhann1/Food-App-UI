@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:foodappui/res/my_colors/my_colors.dart';
 import 'package:foodappui/res/widgets/my_text.dart';
 import 'package:foodappui/res/widgets/resturent_view_widget/resturent_view_widget.dart';
+import 'package:foodappui/res/widgets/top_bar_widget/top_bar_widget.dart';
 import 'package:foodappui/view/home_view/food_categories_view/food_categories_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -26,51 +27,9 @@ class HomeView extends StatelessWidget {
                 height: height * 0.04,
               ),
               //////// top bar ///////
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: MyColors.lightBlue,
-                      radius: 26,
-                      backgroundImage: AssetImage('images/myprofile.png',),
-                    ),
-        
-                    ////// location icon and text///////
-                    Row(
-                      children: [
-                        Image.asset('images/location.png',height: 30,),
-                        SizedBox(width: 10,),
-                        MyText(
-                          title: 'Peshawar, Pakistan',
-                          fontWeight: FontWeight.w600,
-                          color: MyColors.darkGray,
-                          fontSize: 15,
-                        )
-                      ],
-                    ),
-        
-                    Stack(
-                      children: [
-                        Image.asset('images/notification.png',height: 30,),
-                        Positioned(
-                          top: 4,
-                          right: 1,
-                          child: Container(
-                            height: 8,
-                            width: 8,
-                            decoration: BoxDecoration(
-                                color: MyColors.lightBlue,
-                                shape: BoxShape.circle),
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
+              TopBarWidget(),
               SizedBox(
-                height: height * 0.028,
+                height: height * 0.02,
               ),
         
               /////// form textField //////
@@ -160,7 +119,7 @@ class HomeView extends StatelessWidget {
                     children: [
                       ResturentViewWidget(restImage: 'images/resturant1.png',),
                       SizedBox(width: width * 0.07,),
-                      ResturentViewWidget(restImage: 'images/resturant1.png',),
+                      ResturentViewWidget(restImage: 'images/resturant2.png',),
                       SizedBox(width: width * 0.07,),
                       ResturentViewWidget(restImage: 'images/resturant1.png',),
         
