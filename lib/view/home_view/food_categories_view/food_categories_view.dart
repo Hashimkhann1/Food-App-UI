@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodappui/res/my_colors/my_colors.dart';
 import 'package:foodappui/res/widgets/my_text.dart';
+import 'package:foodappui/view/resturant_detail_view/resturant_detail_view.dart';
 
 class FoodCategriesView extends StatelessWidget {
   final String imagePath;
